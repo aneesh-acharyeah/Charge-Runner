@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Charge Runner ⚡</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="hud">
+    <div class="chip">⚡ Charge: <span id="energy">100</span>%</div>
+    <div class="chip">Score: <span id="score">0</span></div>
+    <div class="chip">Best: <span id="best">0</span></div>
+    <div class="power" id="powerState">Power: —</div>
+    <button id="pauseBtn" class="btn">⏸ Pause</button>
+  </div>
+
+  <div class="wrap">
+    <canvas id="game" width="960" height="540" aria-label="Charge Runner"></canvas>
+  </div>
+
+  <!-- Templates -->
+  <template id="game-over-template">
+    <div class="overlay">
+      <h2>GAME OVER</h2>
+      <p>Score: <strong id="final-score">0</strong> · Best: <strong id="final-best">0</strong></p>
+      <button id="restart-final" class="btn">🔁 Play Again</button>
+    </div>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
